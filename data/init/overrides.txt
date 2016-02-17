@@ -1,0 +1,681 @@
+# This file should be placed into data/init and allows to load additional tilesets
+# and override tile numbers for certain item/building types.
+
+# Load additional tileset if you ran out of tiles in main and text fonts
+# [TILESET:font.png:fullscreenfont.png] 
+
+# Add an override
+# [OVERRIDE:Tile:Kind:Id:Type:Subtype:Tileset:NewTile]
+# Tile is the original tile number
+# Kind is I for item or B for building
+# Id see buildings_other_id.h or items_other_id.h
+# Type see building_type.h or item_type.h, may be empty
+# Subtype is some numberical value, don't know what values correspond to what
+# Tileset is an index of tileset to use
+#   0 is the main tileset
+#   1 is a text tileset loaded by this plugin
+#   2 and so on are tilesets specified above
+# NewTile is the new tile number
+
+# Override tile if it didn't match any other rules
+# Behaviour of this may change in future
+# [OVERRIDE:Tile:Tileset:NewTile]
+
+# Examples
+
+# [OVERRIDE:177:B:WINDOW_ANY:WindowGem::0:48]
+# Will make gem windows show as coffins (why not)
+
+# [OVERRIDE:197:I:DOOR:::0:197]
+# [OVERRIDE:197:B:DOOR:::0:197]
+# [OVERRIDE:197:0:229]
+# Will make floor engraving in progess to show as anvils instead of doors
+
+# Check all values carefully as there's not error checking currently and the game will
+# crash if you specify non-existing tileset index, for example.
+
+[TILESET:Rally_ho_twbt_1.png:Rally_ho_twbt_1.png:main]
+[TILESET:Rally_ho_twbt_building.png:Rally_ho_twbt_building.png:building]
+
+########
+# Ammo #
+########
+
+# Bolts
+[OVERRIDE:47:I:AMMO:AMMO:0:main:0]
+# Arrows
+[OVERRIDE:47:I:AMMO:AMMO:1:main:1]
+# Blowdarts
+[OVERRIDE:47:I:AMMO:AMMO:2:main:2]
+
+#########
+# Armor #
+#########
+
+# Breastplates
+[OVERRIDE:91:I:ARMOR:ARMOR:0:main:3]
+# Mail Shirts
+[OVERRIDE:91:I:ARMOR:ARMOR:1:main:4]
+# Leather Armor
+[OVERRIDE:91:I:ARMOR:ARMOR:2:main:5]
+# Coats
+[OVERRIDE:91:I:ARMOR:ARMOR:3:main:6]
+# Shirts
+[OVERRIDE:91:I:ARMOR:ARMOR:4:main:7]
+# Cloaks
+[OVERRIDE:91:I:ARMOR:ARMOR:5:main:8]
+# Tunics
+[OVERRIDE:91:I:ARMOR:ARMOR:6:main:9]
+# Togas
+[OVERRIDE:91:I:ARMOR:ARMOR:7:main:10]
+# Capes
+[OVERRIDE:91:I:ARMOR:ARMOR:8:main:11]
+# Vests
+[OVERRIDE:91:I:ARMOR:ARMOR:9:main:12]
+# Dresses
+[OVERRIDE:91:I:ARMOR:ARMOR:10:main:13]
+# Robes
+[OVERRIDE:91:I:ARMOR:ARMOR:11:main:14]
+
+########
+# Food #
+########
+
+# Biscuits
+[OVERRIDE:37:I:FOOD:FOOD:0:main:15]
+# Stew
+[OVERRIDE:37:I:FOOD:FOOD:1:main:16]
+# Roast
+[OVERRIDE:37:I:FOOD:FOOD:2:main:17]
+
+##########
+# Gloves #
+##########
+
+# Gauntlets
+[OVERRIDE:91:I:GLOVES:GLOVES:0:main:18]
+# Gloves
+[OVERRIDE:91:I:GLOVES:GLOVES:1:main:19]
+# Mittens
+[OVERRIDE:91:I:GLOVES:GLOVES:2:main:20]
+
+#########
+# Helms #
+#########
+
+# Helms
+[OVERRIDE:91:I:HELM:HELM:0:main:21]
+# Caps
+[OVERRIDE:91:I:HELM:HELM:1:main:22]
+# Hoods
+[OVERRIDE:91:I:HELM:HELM:2:main:23]
+# Turbans
+[OVERRIDE:91:I:HELM:HELM:3:main:24]
+# Masks
+[OVERRIDE:91:I:HELM:HELM:4:main:25]
+# Head Veils
+[OVERRIDE:91:I:HELM:HELM:5:main:26]
+# Face Veils
+[OVERRIDE:91:I:HELM:HELM:6:main:27]
+# Headscarves
+[OVERRIDE:91:I:HELM:HELM:7:main:28]
+
+###############
+# Instruments #
+###############
+
+# Flutes
+[OVERRIDE:168:I:INSTRUMENT:INSTRUMENT:0:main:33]
+# Trumpets
+[OVERRIDE:168:I:INSTRUMENT:INSTRUMENT:1:main:30]
+# Harps
+[OVERRIDE:168:I:INSTRUMENT:INSTRUMENT:2:main:31]
+# Drums
+[OVERRIDE:168:I:INSTRUMENT:INSTRUMENT:3:main:32]
+# Piccolos
+[OVERRIDE:168:I:INSTRUMENT:INSTRUMENT:4:main:29]
+
+#########
+# Pants #
+#########
+
+# Trousers
+[OVERRIDE:91:I:PANTS:PANTS:0:main:34]
+# Greaves
+[OVERRIDE:91:I:PANTS:PANTS:1:main:35]
+# Leggings
+[OVERRIDE:91:I:PANTS:PANTS:2:main:36]
+# Loincloths
+[OVERRIDE:91:I:PANTS:PANTS:3:main:107]
+# Thongs
+[OVERRIDE:91:I:PANTS:PANTS:4:main:37]
+# Skirts
+[OVERRIDE:91:I:PANTS:PANTS:5:main:38]
+# Short Skirts
+[OVERRIDE:91:I:PANTS:PANTS:6:main:38]
+# Long Skirts
+[OVERRIDE:91:I:PANTS:PANTS:7:main:39]
+# Braies
+[OVERRIDE:91:I:PANTS:PANTS:8:main:40]
+
+###########
+# Shields #
+###########
+
+# Shields
+[OVERRIDE:91:I:SHIELD:SHIELD:0:main:41]
+# Bucklers
+[OVERRIDE:91:I:SHIELD:SHIELD:1:main:42]
+
+#########
+# Shoes #
+#########
+
+# Shoes
+[OVERRIDE:91:I:SHOES:SHOES:0:main:43]
+# High Boots
+[OVERRIDE:91:I:SHOES:SHOES:1:main:44]
+# Low Boots
+[OVERRIDE:91:I:SHOES:SHOES:2:main:45]
+# Sandals
+[OVERRIDE:91:I:SHOES:SHOES:3:main:46]
+# Chausses
+[OVERRIDE:91:I:SHOES:SHOES:4:main:47]
+# Socks
+[OVERRIDE:91:I:SHOES:SHOES:5:main:48]
+
+#########
+# Tools #
+#########
+
+# Cauldron
+[OVERRIDE:238:I:TOOL:TOOL:0:main:49]
+# Ladle
+[OVERRIDE:47:I:TOOL:TOOL:1:main:50]
+# Bowl
+[OVERRIDE:150:I:TOOL:TOOL:2:main:51]
+# Mortar
+[OVERRIDE:150:I:TOOL:TOOL:3:main:52]
+# Pestle
+[OVERRIDE:47:I:TOOL:TOOL:4:main:53]
+# Carving Knives
+[OVERRIDE:47:I:TOOL:TOOL:5:main:54]
+# Boning Knives
+[OVERRIDE:47:I:TOOL:TOOL:6:main:55]
+# Slicing Knives
+[OVERRIDE:47:I:TOOL:TOOL:7:main:56]
+# Meat Cleavers
+[OVERRIDE:47:I:TOOL:TOOL:8:main:57]
+# Carving Forks
+[OVERRIDE:47:I:TOOL:TOOL:9:main:58]
+# Nest Boxes
+[OVERRIDE:8:I:TOOL:TOOL:10:0:8]
+# Jug
+[OVERRIDE:173:I:TOOL:TOOL:11:main:59]
+# Pots
+[OVERRIDE:238:I:TOOL:TOOL:12:main:60]
+# Hives
+[OVERRIDE:22:I:TOOL:TOOL:13:main:61]
+# Honeycombs
+[OVERRIDE:15:I:TOOL:TOOL:14:main:61]
+# Pouches
+[OVERRIDE:11:I:TOOL:TOOL:15:main:62]
+# Minecarts
+[OVERRIDE:152:I:TOOL:TOOL:16:0:152]
+# Wheelbarrow
+[OVERRIDE:152:I:TOOL:TOOL:17:main:63]
+# Stepladder
+[OVERRIDE:210:I:TOOL:TOOL:18:main:64]
+
+###########
+# Writing #
+###########
+
+# Scroll Roller
+[OVERRIDE:234:I:TOOL:TOOL:19:main:110]
+# Book Binding
+[OVERRIDE:239:I:TOOL:TOOL:20:main:111]
+# Scroll
+[OVERRIDE:167:I:TOOL:TOOL:21:main:112]
+# Quire
+[OVERRIDE:167:I:TOOL:TOOL:22:main:113]
+# Bookcase - Tool 23 - Skip, original is good
+
+########
+# Toys #
+########
+
+# Puzzleboxes
+[OVERRIDE:145:I:TOY:TOY:0:main:65]
+# Toy Boats
+[OVERRIDE:145:I:TOY:TOY:1:main:66]
+# Toy Hammers
+[OVERRIDE:145:I:TOY:TOY:2:main:67]
+# Toy Axes
+[OVERRIDE:145:I:TOY:TOY:3:main:68]
+# Toy Miniforges
+[OVERRIDE:145:I:TOY:TOY:4:main:69]
+
+###################
+# Trap Components #
+###################
+
+# Axe Blades
+[OVERRIDE:228:I:TRAPCOMP:TRAPCOMP:0:main:70]
+# Corkscrews
+[OVERRIDE:228:I:TRAPCOMP:TRAPCOMP:1:main:71]
+# Spiked Balls
+[OVERRIDE:228:I:TRAPCOMP:TRAPCOMP:2:main:72]
+# Large, Serrated Disc
+[OVERRIDE:228:I:TRAPCOMP:TRAPCOMP:3:main:73]
+# Menacing Spike
+[OVERRIDE:228:I:TRAPCOMP:TRAPCOMP:4:0:74]
+
+###########
+# Weapons #
+###########
+
+# Whips
+[OVERRIDE:47:I:WEAPON:WEAPON:0:main:75]
+# Battle Axes
+[OVERRIDE:47:I:WEAPON:WEAPON:1:main:76]
+# War Hammers
+[OVERRIDE:47:I:WEAPON:WEAPON:2:main:77]
+# Short Swords
+[OVERRIDE:47:I:WEAPON:WEAPON:3:main:78]
+# Spears
+[OVERRIDE:47:I:WEAPON:WEAPON:4:main:79]
+# Maces
+[OVERRIDE:47:I:WEAPON:WEAPON:5:main:80]
+# Crossbows
+[OVERRIDE:47:I:WEAPON:WEAPON:6:main:81]
+# Picks
+[OVERRIDE:47:I:WEAPON:WEAPON:7:main:82]
+# Bows
+[OVERRIDE:47:I:WEAPON:WEAPON:8:main:83]
+# Blowguns
+[OVERRIDE:47:I:WEAPON:WEAPON:9:main:84]
+# Pikes
+[OVERRIDE:47:I:WEAPON:WEAPON:10:main:85]
+# Halberd
+[OVERRIDE:47:I:WEAPON:WEAPON:11:main:86]
+# Two-Handed Swords
+[OVERRIDE:47:I:WEAPON:WEAPON:12:main:87]
+# Long Swords
+[OVERRIDE:47:I:WEAPON:WEAPON:13:main:88]
+# Mauls
+[OVERRIDE:47:I:WEAPON:WEAPON:14:main:89]
+# Great Axes
+[OVERRIDE:47:I:WEAPON:WEAPON:15:main:90]
+# Large Dagger
+[OVERRIDE:47:I:WEAPON:WEAPON:16:main:91]
+# Scourges
+[OVERRIDE:47:I:WEAPON:WEAPON:17:main:92]
+# Flail
+[OVERRIDE:47:I:WEAPON:WEAPON:18:main:93]
+# Morning Stars
+[OVERRIDE:47:I:WEAPON:WEAPON:19:main:94]
+# Scimitars
+[OVERRIDE:47:I:WEAPON:WEAPON:20:main:95]
+# Training Axes
+[OVERRIDE:47:I:WEAPON:WEAPON:21:main:96]
+# Training Short Sword
+[OVERRIDE:47:I:WEAPON:WEAPON:22:main:97]
+# Training Spear
+[OVERRIDE:47:I:WEAPON:WEAPON:23:main:98]
+
+########
+# Misc #
+########
+
+# Bin
+[OVERRIDE:88:I:BIN:BIN::main:99]
+# Book
+[OVERRIDE:8:I:BOOK:BOOK::main:100]
+# Bracelet
+[OVERRIDE:153:I:BRACELET:BRACELET::main:101]
+# Chain
+[OVERRIDE:179:I:CHAIN:CHAIN::main:102]
+# Coffin
+[OVERRIDE:48:I:COFFIN:COFFIN::main:103]
+# Coin
+[OVERRIDE:36:I:COIN:COIN::main:104]
+# Crutch
+[OVERRIDE:194:I:CRUTCH:CRUTCH::main:105]
+# Scepter
+[OVERRIDE:45:I:SCEPTER:SCEPTER::main:106]
+# Door
+[OVERRIDE:186:I:DOOR:DOOR::0:197]
+
+#######################
+# Tiles and Buildings #
+#######################
+
+# Coffins
+[OVERRIDE:48:B:COFFIN:::main:103]
+# Hives
+[OVERRIDE:22:B:HIVE:::main:61]
+# Campfire
+[OVERRIDE:42:T:Campfire:main:108]
+# Mine tracks - EW
+[OVERRIDE:205:T:ConstructedFloorTrackEW:main:114]
+[OVERRIDE:205:T:FeatureFloorTrackEW:main:114]
+[OVERRIDE:205:T:FrozenFloorTrackEW:main:115]
+[OVERRIDE:205:T:LavaFloorTrackEW:main:114]
+[OVERRIDE:205:T:MineralFloorTrackEW:main:114]
+[OVERRIDE:205:T:StoneFloorTrackEW:main:114]
+# Mine tracks - NS
+[OVERRIDE:186:T:ConstructedFloorTrackNS:main:116]
+[OVERRIDE:186:T:FeatureFloorTrackNS:main:116]
+[OVERRIDE:186:T:FrozenFloorTrackNS:main:117]
+[OVERRIDE:186:T:LavaFloorTrackNS:main:116]
+[OVERRIDE:186:T:MineralFloorTrackNS:main:116]
+[OVERRIDE:186:T:StoneFloorTrackNS:main:116]
+# Mine tracks - S
+[OVERRIDE:210:T:ConstructedFloorTrackS:main:118]
+[OVERRIDE:210:T:FeatureFloorTrackS:main:118]
+[OVERRIDE:210:T:FrozenFloorTrackS:main:118]
+[OVERRIDE:210:T:LavaFloorTrackS:main:118]
+[OVERRIDE:210:T:MineralFloorTrackS:main:118]
+[OVERRIDE:210:T:StoneFloorTrackS:main:118]
+# Mine tracks - N
+[OVERRIDE:208:T:ConstructedFloorTrackN:main:119]
+[OVERRIDE:208:T:FeatureFloorTrackN:main:119]
+[OVERRIDE:208:T:FrozenFloorTrackN:main:119]
+[OVERRIDE:208:T:LavaFloorTrackN:main:119]
+[OVERRIDE:208:T:MineralFloorTrackN:main:119]
+[OVERRIDE:208:T:StoneFloorTrackN:main:119]
+# Mine tracks - E
+[OVERRIDE:198:T:ConstructedFloorTrackE:main:120]
+[OVERRIDE:198:T:FeatureFloorTrackE:main:120]
+[OVERRIDE:198:T:FrozenFloorTrackE:main:120]
+[OVERRIDE:198:T:LavaFloorTrackE:main:120]
+[OVERRIDE:198:T:MineralFloorTrackE:main:120]
+[OVERRIDE:198:T:StoneFloorTrackE:main:120]
+# Mine tracks - W
+[OVERRIDE:181:T:ConstructedFloorTrackW:main:121]
+[OVERRIDE:181:T:FeatureFloorTrackW:main:121]
+[OVERRIDE:181:T:FrozenFloorTrackW:main:121]
+[OVERRIDE:181:T:LavaFloorTrackW:main:121]
+[OVERRIDE:181:T:MineralFloorTrackW:main:121]
+[OVERRIDE:181:T:StoneFloorTrackW:main:121]
+# Mine tracks - SW
+[OVERRIDE:187:T:ConstructedFloorTrackSW:main:122]
+[OVERRIDE:187:T:FeatureFloorTrackSW:main:122]
+[OVERRIDE:187:T:FrozenFloorTrackSW:main:122]
+[OVERRIDE:187:T:LavaFloorTrackSW:main:122]
+[OVERRIDE:187:T:MineralFloorTrackSW:main:122]
+[OVERRIDE:187:T:StoneFloorTrackSW:main:122]
+# Mine tracks - NW
+[OVERRIDE:200:T:ConstructedFloorTrackNW:main:123]
+[OVERRIDE:200:T:FeatureFloorTrackNW:main:123]
+[OVERRIDE:200:T:FrozenFloorTrackNW:main:123]
+[OVERRIDE:200:T:LavaFloorTrackNW:main:123]
+[OVERRIDE:200:T:MineralFloorTrackNW:main:123]
+[OVERRIDE:200:T:StoneFloorTrackNW:main:123]
+# Mine tracks - NE
+[OVERRIDE:200:T:ConstructedFloorTrackNE:main:124]
+[OVERRIDE:200:T:FeatureFloorTrackNE:main:124]
+[OVERRIDE:200:T:FrozenFloorTrackNE:main:124]
+[OVERRIDE:200:T:LavaFloorTrackNE:main:124]
+[OVERRIDE:200:T:MineralFloorTrackNE:main:124]
+[OVERRIDE:200:T:StoneFloorTrackNE:main:124]
+# Mine tracks - SE
+[OVERRIDE:201:T:ConstructedFloorTrackSE:main:125]
+[OVERRIDE:201:T:FeatureFloorTrackSE:main:125]
+[OVERRIDE:201:T:FrozenFloorTrackSE:main:125]
+[OVERRIDE:201:T:LavaFloorTrackSE:main:125]
+[OVERRIDE:201:T:MineralFloorTrackSE:main:125]
+[OVERRIDE:201:T:StoneFloorTrackSE:main:125]
+# Mine tracks - NEW
+[OVERRIDE:202:T:ConstructedFloorTrackNEW:main:126]
+[OVERRIDE:202:T:FeatureFloorTrackNEW:main:126]
+[OVERRIDE:202:T:FrozenFloorTrackNEW:main:126]
+[OVERRIDE:202:T:LavaFloorTrackNEW:main:126]
+[OVERRIDE:202:T:MineralFloorTrackNEW:main:126]
+[OVERRIDE:202:T:StoneFloorTrackNEW:main:126]
+# Mine tracks - NSE
+[OVERRIDE:204:T:ConstructedFloorTrackNSE:main:127]
+[OVERRIDE:204:T:FeatureFloorTrackNSE:main:127]
+[OVERRIDE:204:T:FrozenFloorTrackNSE:main:127]
+[OVERRIDE:204:T:LavaFloorTrackNSE:main:127]
+[OVERRIDE:204:T:MineralFloorTrackNSE:main:127]
+[OVERRIDE:204:T:StoneFloorTrackNSE:main:127]
+# Mine tracks - NSW
+[OVERRIDE:185:T:ConstructedFloorTrackNSW:main:128]
+[OVERRIDE:185:T:FeatureFloorTrackNSW:main:128]
+[OVERRIDE:185:T:FrozenFloorTrackNSW:main:128]
+[OVERRIDE:185:T:LavaFloorTrackNSW:main:128]
+[OVERRIDE:185:T:MineralFloorTrackNSW:main:128]
+[OVERRIDE:185:T:StoneFloorTrackNSW:main:128]
+# Mine tracks - SEW
+[OVERRIDE:203:T:ConstructedFloorTrackSEW:main:129]
+[OVERRIDE:203:T:FeatureFloorTrackSEW:main:129]
+[OVERRIDE:203:T:FrozenFloorTrackSEW:main:129]
+[OVERRIDE:203:T:LavaFloorTrackSEW:main:129]
+[OVERRIDE:203:T:MineralFloorTrackSEW:main:129]
+[OVERRIDE:203:T:StoneFloorTrackSEW:main:129]
+# Mine tracks - NSEW
+[OVERRIDE:206:T:ConstructedFloorTrackNSEW:main:130]
+[OVERRIDE:206:T:FeatureFloorTrackNSEW:main:130]
+[OVERRIDE:206:T:FrozenFloorTrackNSEW:main:131]
+[OVERRIDE:206:T:LavaFloorTrackNSEW:main:130]
+[OVERRIDE:206:T:MineralFloorTrackNSEW:main:130]
+[OVERRIDE:206:T:StoneFloorTrackNSEW:main:130]
+# Rollers
+[OVERRIDE:246:B:ROLLERS:::main:132]
+# Window
+[OVERRIDE:177:I:WINDOW:WINDOW::main:133]
+[OVERRIDE:177:B:WINDOW_ANY:::main:133]
+# Farms
+[OVERRIDE:205:B:FARM_PLOT:FarmPlot::0:130]
+
+#############
+# Buildings #
+#############
+# Trade Depot
+[OVERRIDE:79:B:TRADE_DEPOT:::main:109]
+[OVERRIDE:219:B:TRADE_DEPOT:::building:45]
+# Carpenter
+[OVERRIDE:176:B:WORKSHOP_CARPENTER:Workshop::building:0]
+[OVERRIDE:93:B:WORKSHOP_CARPENTER:Workshop::building:1]
+[OVERRIDE:61:B:WORKSHOP_CARPENTER:Workshop::0:93]
+[OVERRIDE:34:B:WORKSHOP_CARPENTER:Workshop::0:22]
+# Ashery
+[OVERRIDE:176:B:WORKSHOP_ASHERY:Workshop::building:2]
+[OVERRIDE:247:B:WORKSHOP_ASHERY:Workshop::building:3]
+[OVERRIDE:120:B:WORKSHOP_ASHERY:Workshop::building:4]
+[OVERRIDE:45:B:WORKSHOP_ASHERY:Workshop::building:5]
+# Bowyer
+[OVERRIDE:176:B:WORKSHOP_BOWYER:Workshop::building:2]
+[OVERRIDE:93:B:WORKSHOP_BOWYER:Workshop::building:6]
+[OVERRIDE:238:B:WORKSHOP_BOWYER:Workshop::building:7]
+[OVERRIDE:40:B:WORKSHOP_BOWYER:Workshop::main:81]
+# Butcher
+[OVERRIDE:176:B:WORKSHOP_BUTCHER:Workshop::building:8]
+[OVERRIDE:247:B:WORKSHOP_BUTCHER:Workshop::building:9]
+[OVERRIDE:236:B:WORKSHOP_BUTCHER:Workshop::building:10]
+# Clothier
+[OVERRIDE:176:B:WORKSHOP_CLOTHIER:Workshop::building:2]
+[OVERRIDE:91:B:WORKSHOP_CLOTHIER:Workshop::main:7]
+[OVERRIDE:93:B:WORKSHOP_CLOTHIER:Workshop::building:11]
+# Craftsdwarf
+[OVERRIDE:176:B:WORKSHOP_CRAFTSDWARF:Workshop::building:2]
+[OVERRIDE:45:B:WORKSHOP_CRAFTSDWARF:Workshop::building:5]
+[OVERRIDE:93:B:WORKSHOP_CRAFTSDWARF:Workshop::main:238]
+# Dyer
+[OVERRIDE:150:B:WORKSHOP_DYER:Workshop::building:12]
+[OVERRIDE:7:B:WORKSHOP_DYER:Workshop::0:237]
+[OVERRIDE:111:B:WORKSHOP_DYER:Workshop::building:3]
+# Farmer
+[OVERRIDE:65:B:WORKSHOP_FARMER:Workshop::building:13]
+[OVERRIDE:240:B:WORKSHOP_FARMER:Workshop::building:14]
+[OVERRIDE:79:B:WORKSHOP_FARMER:Workshop::building:15]
+[OVERRIDE:210:B:WORKSHOP_FARMER:Workshop::building:6]
+[OVERRIDE:237:B:WORKSHOP_FARMER:Workshop::building:16]
+# Fishery
+[OVERRIDE:176:B:WORKSHOP_FISHERY:Workshop::building:14]
+[OVERRIDE:224:B:WORKSHOP_FISHERY:Workshop::0:160]
+# Jeweler
+[OVERRIDE:42:B:WORKSHOP_JEWELER:Workshop::0:4]
+[OVERRIDE:176:B:WORKSHOP_JEWELER:Workshop::building:2]
+[OVERRIDE:91:B:WORKSHOP_JEWELER:Workshop::building:6]
+[OVERRIDE:123:B:WORKSHOP_JEWELER:Workshop::building:17]
+# Kitchen
+[OVERRIDE:176:B:WORKSHOP_KITCHEN:Workshop::building:13]
+[OVERRIDE:236:B:WORKSHOP_KITCHEN:Workshop::building:18]
+[OVERRIDE:59:B:WORKSHOP_KITCHEN:Workshop::building:19]
+# Leatherworks
+[OVERRIDE:177:B:WORKSHOP_LEATHER:Workshop::0:225]
+[OVERRIDE:92:B:WORKSHOP_LEATHER:Workshop::main:54]
+# Loom
+[OVERRIDE:195:B:WORKSHOP_LOOM:Workshop::building:20]
+[OVERRIDE:35:B:WORKSHOP_LOOM:Workshop::building:21]
+[OVERRIDE:180:B:WORKSHOP_LOOM:Workshop::building:22]
+[OVERRIDE:237:B:WORKSHOP_LOOM:Workshop::building:23]
+[OVERRIDE:167:B:WORKSHOP_LOOM:Workshop::building:24]
+# Magma Forge
+[OVERRIDE:8:B:WORKSHOP_MAGMA_FORGE:Workshop::building:25]
+[OVERRIDE:22:B:WORKSHOP_MAGMA_FORGE:Workshop::building:27]
+[OVERRIDE:92:B:WORKSHOP_MAGMA_FORGE:Workshop::main:67]
+# Mason
+[OVERRIDE:176:B:WORKSHOP_MASON:Workshop::building:13]
+[OVERRIDE:59:B:WORKSHOP_MASON:Workshop::0:93]
+[OVERRIDE:91:B:WORKSHOP_MASON:Workshop::0:35]
+[OVERRIDE:111:B:WORKSHOP_MASON:Workshop::0:9]
+# Mechanic
+[OVERRIDE:176:B:WORKSHOP_MECHANIC:Workshop::building:14]
+[OVERRIDE:127:B:WORKSHOP_MECHANIC:Workshop::building:28]
+[OVERRIDE:94:B:WORKSHOP_MECHANIC:Workshop::building:29]
+[OVERRIDE:91:B:WORKSHOP_MECHANIC:Workshop::building:30]
+# Metalsmith's Forge - Might have the wrong ID
+[OVERRIDE:31:B:WORKSHOP_FORGE_ANY:Workshop::building:31]
+[OVERRIDE:8:B:WORKSHOP_FORGE_ANY:Workshop::building:27]
+# Screw Pump
+[OVERRIDE:207:B:SCREW_PUMP:ScrewPump::building:32]
+# Siege Workshop
+[OVERRIDE:176:B:WORKSHOP_SIEGE:Workshop::building:14]
+[OVERRIDE:111:B:WORKSHOP_SIEGE:Workshop::building:1]
+[OVERRIDE:47:B:WORKSHOP_SIEGE:Workshop::building:33]
+[OVERRIDE:92:B:WORKSHOP_SIEGE:Workshop::building:34]
+[OVERRIDE:126:B:WORKSHOP_SIEGE:Workshop::building:29]
+# Still
+[OVERRIDE:246:B:WORKSHOP_STILL:Workshop::building:46]
+[OVERRIDE:205:B:WORKSHOP_STILL:Workshop::building:36]
+[OVERRIDE:184:B:WORKSHOP_STILL:Workshop::building:37]
+[OVERRIDE:126:B:WORKSHOP_STILL:Workshop::building:38]
+[OVERRIDE:111:B:WORKSHOP_STILL:Workshop::building:39]
+# Soap Maker
+[OVERRIDE:150:B:SOAP_MAKER:Workshop::building:3]
+[OVERRIDE:8:B:SOAP_MAKER:Workshop::building:0]
+[OVERRIDE:240:B:SOAP_MAKER:Workshop::building:40]
+# Tanner
+[OVERRIDE:176:B:WORKSHOP_TANNER:Workshop::building:14]
+[OVERRIDE:8:B:WORKSHOP_TANNER:Workshop::0:225]
+# Glass Furnace
+[OVERRIDE:7:B:FURNACE_GLASS_ANY:Furnace::main:69]
+[OVERRIDE:111:B:FURNACE_GLASS_ANY:Furnace::0:11]
+[OVERRIDE:93:B:FURNACE_GLASS_ANY:Furnace::building:41]
+[OVERRIDE:61:B:FURNACE_GLASS_ANY:Furnace::building:38]
+# Kiln
+[OVERRIDE:7:B:FURNACE_KILN_ANY:Furnace::building:27]
+[OVERRIDE:111:B:FURNACE_KILN_ANY:Furnace::building:60]
+[OVERRIDE:93:B:FURNACE_GLASS_ANY:Furnace::building:41]
+[OVERRIDE:61:B:FURNACE_GLASS_ANY:Furnace::building:26]
+# Magma Smelter
+[OVERRIDE:7:B:FURNACE_SMELTER_ANY:Furnace::building:42]
+[OVERRIDE:93:B:FURNACE_SMELTER_ANY:Furnace::building:43]
+[OVERRIDE:240:B:FURNACE_SMELTER_ANY:Furnace::0:43]
+[OVERRIDE:61:B:FURNACE_SMELTER_ANY:Furnace::building:44]
+# Wood Furnace
+[OVERRIDE:7:B:FURNACE_WOOD:Furnace::main:69]
+[OVERRIDE:93:B:FURNACE_WOOD:Furnace::building:41]
+[OVERRIDE:111:B:FURNACE_WOOD:Furnace::0:11]
+[OVERRIDE:61:B:FURNACE_WOOD:Furnace::0:22]
+# Kennel
+[OVERRIDE:235:B:WORKSHOP_KENNEL:Workshop::main:36]
+# Support
+[OVERRIDE:79:B:SUPPORT:::main:109]
+
+################
+# Construction #
+################
+# /
+[OVERRIDE:47:B:TRADE_DEPOT:::building:47]
+[OVERRIDE:47:B:WORKSHOP_CARPENTER:Workshop::building:47]
+[OVERRIDE:47:B:WORKSHOP_ASHERY:Workshop::building:47]
+[OVERRIDE:47:B:WORKSHOP_BOWYER:Workshop::building:47]
+[OVERRIDE:47:B:WORKSHOP_BUTCHER:Workshop::building:47]
+[OVERRIDE:47:B:WORKSHOP_CLOTHIER:Workshop::building:47]
+[OVERRIDE:47:B:WORKSHOP_CRAFTSDWARF:Workshop::building:47]
+[OVERRIDE:47:B:WORKSHOP_DYER:Workshop::building:47]
+[OVERRIDE:47:B:WORKSHOP_FARMER:Workshop::building:47]
+[OVERRIDE:47:B:WORKSHOP_FISHERY:Workshop::building:47]
+[OVERRIDE:47:B:WORKSHOP_JEWELER:Workshop::building:47]
+[OVERRIDE:47:B:WORKSHOP_KITCHEN:Workshop::building:47]
+[OVERRIDE:47:B:WORKSHOP_LEATHER:Workshop::building:47]
+[OVERRIDE:47:B:WORKSHOP_LOOM:Workshop::building:47]
+[OVERRIDE:47:B:WORKSHOP_MAGMA_FORGE:Workshop::building:47]
+[OVERRIDE:47:B:WORKSHOP_MASON:Workshop::building:47]
+[OVERRIDE:47:B:WORKSHOP_MECHANIC:Workshop::building:47]
+[OVERRIDE:47:B:WORKSHOP_FORGE_ANY:Workshop::building:47]
+[OVERRIDE:47:B:SCREW_PUMP:ScrewPump::building:47]
+[OVERRIDE:47:B:WORKSHOP_STILL:Workshop::building:47]
+[OVERRIDE:47:B:SOAP_MAKER:Workshop::building:47]
+[OVERRIDE:47:B:WORKSHOP_TANNER:Workshop::building:47]
+[OVERRIDE:47:B:FURNACE_GLASS_ANY:Furnace::building:47]
+[OVERRIDE:47:B:FURNACE_KILN_ANY:Furnace::building:47]
+[OVERRIDE:47:B:FURNACE_SMELTER_ANY:Furnace::building:47]
+[OVERRIDE:47:B:FURNACE_WOOD:Furnace::building:47]
+[OVERRIDE:47:B:WORKSHOP_KENNEL:Workshop::building:47]
+# \
+[OVERRIDE:48:B:TRADE_DEPOT:::building:48]
+[OVERRIDE:48:B:WORKSHOP_CARPENTER:Workshop::building:48]
+[OVERRIDE:48:B:WORKSHOP_ASHERY:Workshop::building:48]
+[OVERRIDE:48:B:WORKSHOP_BOWYER:Workshop::building:48]
+[OVERRIDE:48:B:WORKSHOP_BUTCHER:Workshop::building:48]
+[OVERRIDE:48:B:WORKSHOP_CLOTHIER:Workshop::building:48]
+[OVERRIDE:48:B:WORKSHOP_CRAFTSDWARF:Workshop::building:48]
+[OVERRIDE:48:B:WORKSHOP_DYER:Workshop::building:48]
+[OVERRIDE:48:B:WORKSHOP_FARMER:Workshop::building:48]
+[OVERRIDE:48:B:WORKSHOP_FISHERY:Workshop::building:48]
+[OVERRIDE:48:B:WORKSHOP_JEWELER:Workshop::building:48]
+[OVERRIDE:48:B:WORKSHOP_KITCHEN:Workshop::building:48]
+[OVERRIDE:48:B:WORKSHOP_LOOM:Workshop::building:48]
+[OVERRIDE:48:B:WORKSHOP_MASON:Workshop::building:48]
+[OVERRIDE:48:B:WORKSHOP_MECHANIC:Workshop::building:48]
+[OVERRIDE:48:B:WORKSHOP_FORGE_ANY:Workshop::building:48]
+[OVERRIDE:48:B:SCREW_PUMP:ScrewPump::building:48]
+[OVERRIDE:48:B:WORKSHOP_STILL:Workshop::building:48]
+[OVERRIDE:48:B:SOAP_MAKER:Workshop::building:48]
+[OVERRIDE:48:B:WORKSHOP_TANNER:Workshop::building:48]
+[OVERRIDE:48:B:FURNACE_GLASS_ANY:Furnace::building:48]
+[OVERRIDE:48:B:FURNACE_KILN_ANY:Furnace::building:48]
+[OVERRIDE:48:B:FURNACE_SMELTER_ANY:Furnace::building:48]
+[OVERRIDE:48:B:FURNACE_WOOD:Furnace::building:48]
+[OVERRIDE:48:B:WORKSHOP_KENNEL:Workshop::building:48]
+# - 
+[OVERRIDE:49:B:TRADE_DEPOT:::building:49]
+[OVERRIDE:49:B:WORKSHOP_CARPENTER:Workshop::building:49]
+[OVERRIDE:49:B:WORKSHOP_BOWYER:Workshop::building:49]
+[OVERRIDE:49:B:WORKSHOP_BUTCHER:Workshop::building:49]
+[OVERRIDE:49:B:WORKSHOP_CLOTHIER:Workshop::building:49]
+[OVERRIDE:49:B:WORKSHOP_DYER:Workshop::building:49]
+[OVERRIDE:49:B:WORKSHOP_FARMER:Workshop::building:49]
+[OVERRIDE:49:B:WORKSHOP_FISHERY:Workshop::building:49]
+[OVERRIDE:49:B:WORKSHOP_JEWELER:Workshop::building:49]
+[OVERRIDE:49:B:WORKSHOP_KITCHEN:Workshop::building:49]
+[OVERRIDE:49:B:WORKSHOP_LOOM:Workshop::building:49]
+[OVERRIDE:49:B:WORKSHOP_MASON:Workshop::building:49]
+[OVERRIDE:49:B:WORKSHOP_MECHANIC:Workshop::building:49]
+[OVERRIDE:49:B:WORKSHOP_SIEGE:Workshop::building:49]
+[OVERRIDE:49:B:WORKSHOP_FORGE_ANY:Workshop::building:49]
+[OVERRIDE:49:B:SCREW_PUMP:ScrewPump::building:49]
+[OVERRIDE:49:B:WORKSHOP_STILL:Workshop::building:49]
+[OVERRIDE:49:B:SOAP_MAKER:Workshop::building:49]
+[OVERRIDE:49:B:WORKSHOP_TANNER:Workshop::building:49]
+[OVERRIDE:49:B:FURNACE_GLASS_ANY:Furnace::building:49]
+[OVERRIDE:49:B:FURNACE_KILN_ANY:Furnace::building:49]
+[OVERRIDE:49:B:FURNACE_SMELTER_ANY:Furnace::building:49]
+[OVERRIDE:49:B:FURNACE_WOOD:Furnace::building:49]
+[OVERRIDE:49:B:WORKSHOP_KENNEL:Workshop::building:49]
