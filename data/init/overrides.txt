@@ -36,6 +36,7 @@
 
 [TILESET:Rally_ho_twbt_1.png:Rally_ho_twbt_1.png:main]
 [TILESET:Rally_ho_twbt_building.png:Rally_ho_twbt_building.png:building]
+[TILESET:Rally_ho_twbt_plant.png:Rally_ho_twbt_plant.png:plant]
 
 ########
 # Ammo #
@@ -226,11 +227,6 @@
 [OVERRIDE:152:I:TOOL:TOOL:17:main:63]
 # Stepladder
 [OVERRIDE:210:I:TOOL:TOOL:18:main:64]
-
-###########
-# Writing #
-###########
-
 # Scroll Roller
 [OVERRIDE:234:I:TOOL:TOOL:19:main:110]
 # Book Binding
@@ -240,6 +236,11 @@
 # Quire
 [OVERRIDE:167:I:TOOL:TOOL:22:main:113]
 # Bookcase - Tool 23 - Skip, original is good
+# Helve
+[OVERRIDE:92:I:TOOL:TOOL:24:main:134]
+# Stone Axe
+[OVERRIDE:47:I:TOOL:TOOL:25:main:135]
+
 
 ########
 # Toys #
@@ -534,10 +535,6 @@
 [OVERRIDE:180:B:WORKSHOP_LOOM:Workshop::building:22]
 [OVERRIDE:237:B:WORKSHOP_LOOM:Workshop::building:23]
 [OVERRIDE:167:B:WORKSHOP_LOOM:Workshop::building:24]
-# Magma Forge
-[OVERRIDE:8:B:WORKSHOP_MAGMA_FORGE:Workshop::building:25]
-[OVERRIDE:22:B:WORKSHOP_MAGMA_FORGE:Workshop::building:27]
-[OVERRIDE:92:B:WORKSHOP_MAGMA_FORGE:Workshop::main:67]
 # Mason
 [OVERRIDE:176:B:WORKSHOP_MASON:Workshop::building:13]
 [OVERRIDE:59:B:WORKSHOP_MASON:Workshop::0:93]
@@ -551,8 +548,12 @@
 # Metalsmith's Forge - Might have the wrong ID
 [OVERRIDE:31:B:WORKSHOP_FORGE_ANY:Workshop::building:31]
 [OVERRIDE:8:B:WORKSHOP_FORGE_ANY:Workshop::building:27]
+# Magma Forge
+[OVERRIDE:8:B:WORKSHOP_MAGMA_FORGE:Workshop::building:25]
+[OVERRIDE:22:B:WORKSHOP_MAGMA_FORGE:Workshop::building:27]
+[OVERRIDE:92:B:WORKSHOP_MAGMA_FORGE:Workshop::main:67]
 # Screw Pump
-[OVERRIDE:207:B:SCREW_PUMP:ScrewPump::building:32]
+[OVERRIDE:207:B:WORKSHOP_CUSTOM:Workshop:SCREW_PUMP:building:32]
 # Siege Workshop
 [OVERRIDE:176:B:WORKSHOP_SIEGE:Workshop::building:14]
 [OVERRIDE:111:B:WORKSHOP_SIEGE:Workshop::building:1]
@@ -566,9 +567,9 @@
 [OVERRIDE:126:B:WORKSHOP_STILL:Workshop::building:38]
 [OVERRIDE:111:B:WORKSHOP_STILL:Workshop::building:39]
 # Soap Maker
-[OVERRIDE:150:B:SOAP_MAKER:Workshop::building:3]
-[OVERRIDE:8:B:SOAP_MAKER:Workshop::building:0]
-[OVERRIDE:240:B:SOAP_MAKER:Workshop::building:40]
+[OVERRIDE:150:B:WORKSHOP_CUSTOM:Workshop:SOAP_MAKER:building:3]
+[OVERRIDE:8:B:WORKSHOP_CUSTOM:Workshop:SOAP_MAKER:building:0]
+[OVERRIDE:240:B:WORKSHOP_CUSTOM:Workshop:SOAP_MAKER:building:40]
 # Tanner
 [OVERRIDE:176:B:WORKSHOP_TANNER:Workshop::building:14]
 [OVERRIDE:8:B:WORKSHOP_TANNER:Workshop::0:225]
@@ -619,9 +620,9 @@
 [OVERRIDE:47:B:WORKSHOP_MASON:Workshop::building:47]
 [OVERRIDE:47:B:WORKSHOP_MECHANIC:Workshop::building:47]
 [OVERRIDE:47:B:WORKSHOP_FORGE_ANY:Workshop::building:47]
-[OVERRIDE:47:B:SCREW_PUMP:ScrewPump::building:47]
+[OVERRIDE:47:B:WORKSHOP_CUSTOM:Workshop:SCREW_PUMP:building:47]
 [OVERRIDE:47:B:WORKSHOP_STILL:Workshop::building:47]
-[OVERRIDE:47:B:SOAP_MAKER:Workshop::building:47]
+[OVERRIDE:47:B:WORKSHOP_CUSTOM:Workshop:SOAP_MAKER:building:47]
 [OVERRIDE:47:B:WORKSHOP_TANNER:Workshop::building:47]
 [OVERRIDE:47:B:FURNACE_GLASS_ANY:Furnace::building:47]
 [OVERRIDE:47:B:FURNACE_KILN_ANY:Furnace::building:47]
@@ -645,9 +646,9 @@
 [OVERRIDE:48:B:WORKSHOP_MASON:Workshop::building:48]
 [OVERRIDE:48:B:WORKSHOP_MECHANIC:Workshop::building:48]
 [OVERRIDE:48:B:WORKSHOP_FORGE_ANY:Workshop::building:48]
-[OVERRIDE:48:B:SCREW_PUMP:ScrewPump::building:48]
+[OVERRIDE:48:B:WORKSHOP_CUSTOM:Workshop:SCREW_PUMP:building:48]
 [OVERRIDE:48:B:WORKSHOP_STILL:Workshop::building:48]
-[OVERRIDE:48:B:SOAP_MAKER:Workshop::building:48]
+[OVERRIDE:48:B:WORKSHOP_CUSTOM:Workshop:SOAP_MAKER:building:48]
 [OVERRIDE:48:B:WORKSHOP_TANNER:Workshop::building:48]
 [OVERRIDE:48:B:FURNACE_GLASS_ANY:Furnace::building:48]
 [OVERRIDE:48:B:FURNACE_KILN_ANY:Furnace::building:48]
@@ -670,12 +671,295 @@
 [OVERRIDE:49:B:WORKSHOP_MECHANIC:Workshop::building:49]
 [OVERRIDE:49:B:WORKSHOP_SIEGE:Workshop::building:49]
 [OVERRIDE:49:B:WORKSHOP_FORGE_ANY:Workshop::building:49]
-[OVERRIDE:49:B:SCREW_PUMP:ScrewPump::building:49]
+[OVERRIDE:49:B:WORKSHOP_CUSTOM:Workshop:SCREW_PUMP:building:49]
 [OVERRIDE:49:B:WORKSHOP_STILL:Workshop::building:49]
-[OVERRIDE:49:B:SOAP_MAKER:Workshop::building:49]
+[OVERRIDE:49:B:WORKSHOP_CUSTOM:Workshop:SOAP_MAKER:building:49]
 [OVERRIDE:49:B:WORKSHOP_TANNER:Workshop::building:49]
 [OVERRIDE:49:B:FURNACE_GLASS_ANY:Furnace::building:49]
 [OVERRIDE:49:B:FURNACE_KILN_ANY:Furnace::building:49]
 [OVERRIDE:49:B:FURNACE_SMELTER_ANY:Furnace::building:49]
 [OVERRIDE:49:B:FURNACE_WOOD:Furnace::building:49]
 [OVERRIDE:49:B:WORKSHOP_KENNEL:Workshop::building:49]
+
+##########
+# Plants #
+##########
+
+
+### Plant Growths ###
+
+# Plants at 0, 48, 96 are a template for the ground
+# Mushrooms
+[OVERRIDE:3:B:FARM_PLOT:FarmPlot::plant:1]
+[OVERRIDE:3:T:Shrub:plant:49]
+[OVERRIDE:3:T:ShrubDead:plant:97]
+# Wheat
+[OVERRIDE:4:B:FARM_PLOT:FarmPlot::plant:2]
+[OVERRIDE:4:T:Shrub:plant:50]
+[OVERRIDE:4:T:ShrubDead:plant:98]
+# Oat
+[OVERRIDE:7:B:FARM_PLOT:FarmPlot::plant:3]
+[OVERRIDE:7:T:Shrub:plant:51]
+[OVERRIDE:7:T:ShrubDead:plant:99]
+# Alfalfa
+[OVERRIDE:8:B:FARM_PLOT:FarmPlot::plant:4]
+[OVERRIDE:8:T:Shrub:plant:52]
+[OVERRIDE:8:T:ShrubDead:plant:100]
+# Sorghum
+[OVERRIDE:9:B:FARM_PLOT:FarmPlot::plant:5]
+[OVERRIDE:9:T:Shrub:plant:53]
+[OVERRIDE:9:T:ShrubDead:plant:101]
+# Rice
+[OVERRIDE:10:B:FARM_PLOT:FarmPlot::plant:6]
+[OVERRIDE:10:T:Shrub:plant:54]
+[OVERRIDE:10:T:ShrubDead:plant:102]
+# Corn
+[OVERRIDE:11:B:FARM_PLOT:FarmPlot::plant:7]
+[OVERRIDE:11:T:Shrub:plant:55]
+[OVERRIDE:11:T:ShrubDead:plant:103]
+# Fern
+[OVERRIDE:12:B:FARM_PLOT:FarmPlot::plant:8]
+[OVERRIDE:12:T:Shrub:plant:56]
+[OVERRIDE:12:T:ShrubDead:plant:104]
+# Amaranth
+[OVERRIDE:13:B:FARM_PLOT:FarmPlot::plant:9]
+[OVERRIDE:13:T:Shrub:plant:57]
+[OVERRIDE:13:T:ShrubDead:plant:105]
+# Millet
+[OVERRIDE:14:B:FARM_PLOT:FarmPlot::plant:10]
+[OVERRIDE:14:T:Shrub:plant:58]
+[OVERRIDE:14:T:ShrubDead:plant:106]
+# Teff
+[OVERRIDE:15:B:FARM_PLOT:FarmPlot::plant:11]
+[OVERRIDE:15:T:Shrub:plant:59]
+[OVERRIDE:15:T:ShrubDead:plant:107]
+# Flax
+[OVERRIDE:16:B:FARM_PLOT:FarmPlot::plant:12]
+[OVERRIDE:16:T:Shrub:plant:60]
+[OVERRIDE:16:T:ShrubDead:plant:108]
+# Jute
+[OVERRIDE:17:B:FARM_PLOT:FarmPlot::plant:13]
+[OVERRIDE:17:T:Shrub:plant:61]
+[OVERRIDE:17:T:ShrubDead:plant:109]
+# Hemp
+[OVERRIDE:18:B:FARM_PLOT:FarmPlot::plant:14]
+[OVERRIDE:18:T:Shrub:plant:62]
+[OVERRIDE:18:T:ShrubDead:plant:110]
+# Cotton
+[OVERRIDE:19:B:FARM_PLOT:FarmPlot::plant:15]
+[OVERRIDE:19:T:Shrub:plant:63]
+[OVERRIDE:19:T:ShrubDead:plant:111]
+# Papyrus
+[OVERRIDE:20:B:FARM_PLOT:FarmPlot::plant:16]
+[OVERRIDE:20:T:Shrub:plant:64]
+[OVERRIDE:20:T:ShrubDead:plant:112]
+# Artichoke
+[OVERRIDE:21:B:FARM_PLOT:FarmPlot::plant:17]
+[OVERRIDE:21:T:Shrub:plant:65]
+[OVERRIDE:21:T:ShrubDead:plant:113]
+# Carrot?
+[OVERRIDE:22:B:FARM_PLOT:FarmPlot::plant:18]
+[OVERRIDE:22:T:Shrub:plant:66]
+[OVERRIDE:22:T:ShrubDead:plant:114]
+# Groundnut
+[OVERRIDE:23:B:FARM_PLOT:FarmPlot::plant:19]
+[OVERRIDE:23:T:Shrub:plant:67]
+[OVERRIDE:23:T:ShrubDead:plant:115]
+# Bean Plant
+[OVERRIDE:24:B:FARM_PLOT:FarmPlot::plant:20]
+[OVERRIDE:24:T:Shrub:plant:68]
+[OVERRIDE:24:T:ShrubDead:plant:116]
+# Beet
+[OVERRIDE:25:B:FARM_PLOT:FarmPlot::plant:21]
+[OVERRIDE:25:T:Shrub:plant:69]
+[OVERRIDE:25:T:ShrubDead:plant:117]
+# Bitter Melon
+[OVERRIDE:26:B:FARM_PLOT:FarmPlot::plant:22]
+[OVERRIDE:26:T:Shrub:plant:70]
+[OVERRIDE:26:T:ShrubDead:plant:118]
+# Cabbage
+[OVERRIDE:27:B:FARM_PLOT:FarmPlot::plant:23]
+[OVERRIDE:27:T:Shrub:plant:71]
+[OVERRIDE:27:T:ShrubDead:plant:119]
+# Flower plant
+[OVERRIDE:28:B:FARM_PLOT:FarmPlot::plant:24]
+[OVERRIDE:28:T:Shrub:plant:72]
+[OVERRIDE:28:T:ShrubDead:plant:120]
+# Celery
+[OVERRIDE:29:B:FARM_PLOT:FarmPlot::plant:25]
+[OVERRIDE:29:T:Shrub:plant:73]
+[OVERRIDE:29:T:ShrubDead:plant:121]
+# Flower
+[OVERRIDE:30:B:FARM_PLOT:FarmPlot::plant:26]
+[OVERRIDE:30:T:Shrub:plant:74]
+[OVERRIDE:30:T:ShrubDead:plant:122]
+# Cucumber
+[OVERRIDE:31:B:FARM_PLOT:FarmPlot::plant:27]
+[OVERRIDE:31:T:Shrub:plant:75]
+[OVERRIDE:31:T:ShrubDead:plant:123]
+# Eggplant
+[OVERRIDE:33:B:FARM_PLOT:FarmPlot::plant:28]
+[OVERRIDE:33:T:Shrub:plant:76]
+[OVERRIDE:33:T:ShrubDead:plant:124]
+# Garden Cress
+[OVERRIDE:34:B:FARM_PLOT:FarmPlot::plant:29]
+[OVERRIDE:34:T:Shrub:plant:77]
+[OVERRIDE:34:T:ShrubDead:plant:125]
+# Garlic
+[OVERRIDE:35:B:FARM_PLOT:FarmPlot::plant:30]
+[OVERRIDE:35:T:Shrub:plant:78]
+[OVERRIDE:35:T:ShrubDead:plant:126]
+# Melon
+[OVERRIDE:36:B:FARM_PLOT:FarmPlot::plant:31]
+[OVERRIDE:36:T:Shrub:plant:79]
+[OVERRIDE:36:T:ShrubDead:plant:127]
+# Leek
+[OVERRIDE:37:B:FARM_PLOT:FarmPlot::plant:32]
+[OVERRIDE:37:T:Shrub:plant:80]
+[OVERRIDE:37:T:ShrubDead:plant:128]
+# Pepper
+[OVERRIDE:38:B:FARM_PLOT:FarmPlot::plant:32]
+[OVERRIDE:38:T:Shrub:plant:80]
+[OVERRIDE:38:T:ShrubDead:plant:128]
+# Spinach
+[OVERRIDE:39:B:FARM_PLOT:FarmPlot::plant:33]
+[OVERRIDE:39:T:Shrub:plant:81]
+[OVERRIDE:39:T:ShrubDead:plant:129]
+# Yellow Melon
+[OVERRIDE:40:B:FARM_PLOT:FarmPlot::plant:34]
+[OVERRIDE:40:T:Shrub:plant:82]
+[OVERRIDE:40:T:ShrubDead:plant:130]
+# Tomato
+[OVERRIDE:41:B:FARM_PLOT:FarmPlot::plant:35]
+[OVERRIDE:41:T:Shrub:plant:83]
+[OVERRIDE:41:T:ShrubDead:plant:131]
+# Blue Melon
+[OVERRIDE:42:B:FARM_PLOT:FarmPlot::plant:36]
+[OVERRIDE:42:T:Shrub:plant:84]
+[OVERRIDE:42:T:ShrubDead:plant:132]
+# Berry plant
+[OVERRIDE:43:B:FARM_PLOT:FarmPlot::plant:37]
+[OVERRIDE:43:T:Shrub:plant:85]
+[OVERRIDE:43:T:ShrubDead:plant:133]
+# Pineapple
+[OVERRIDE:44:B:FARM_PLOT:FarmPlot::plant:38]
+[OVERRIDE:44:T:Shrub:plant:86]
+[OVERRIDE:44:T:ShrubDead:plant:134]
+
+#################
+# Picked Plants #
+#################
+# Mushroom
+[OVERRIDE:3:I:PLANT:PLANT::plant:144]
+# Leek
+[OVERRIDE:4:I:PLANT:PLANT::plant:145]
+# Pear
+[OVERRIDE:6:I:PLANT:PLANT::plant:146]
+# Walnut
+[OVERRIDE:7:I:PLANT:PLANT::plant:147]
+# Star Fruit
+[OVERRIDE:8:I:PLANT:PLANT::plant:148]
+# Watermelon
+[OVERRIDE:9:I:PLANT:PLANT::plant:149]
+# Leaf 1
+[OVERRIDE:5:I:PLANT:PLANT::plant:150]
+# Big Flower
+[OVERRIDE:128:I:PLANT:PLANT::plant:151]
+# Nut
+[OVERRIDE:11:I:PLANT:PLANT::plant:152]
+# Avocado/Squash
+[OVERRIDE:12:I:PLANT:PLANT::plant:153]
+# Garlic
+[OVERRIDE:13:I:PLANT:PLANT::plant:154]
+# Red Pepper
+[OVERRIDE:14:I:PLANT:PLANT::plant:155]
+# Bell Pepper
+[OVERRIDE:15:I:PLANT:PLANT::plant:156]
+# Bean
+[OVERRIDE:16:I:PLANT:PLANT::plant:157]
+# Herb / Leaf 1
+[OVERRIDE:17:I:PLANT:PLANT::plant:158]
+# Leaf 2
+[OVERRIDE:18:I:PLANT:PLANT::plant:159]
+# Red Berry
+[OVERRIDE:19:I:PLANT:PLANT::plant:160]
+# Yellow Berry
+[OVERRIDE:20:I:PLANT:PLANT::plant:161]
+# Blue Berry
+[OVERRIDE:21:I:PLANT:PLANT::plant:162]
+# Generic Berry
+[OVERRIDE:22:I:PLANT:PLANT::plant:163]
+# Bud
+[OVERRIDE:23:I:PLANT:PLANT::plant:164]
+# Apple
+[OVERRIDE:24:I:PLANT:PLANT::plant:165]
+# Banana
+[OVERRIDE:25:I:PLANT:PLANT::plant:166]
+# Grape
+[OVERRIDE:26:I:PLANT:PLANT::plant:167]
+# Durian
+[OVERRIDE:27:I:PLANT:PLANT::plant:168]
+# Wheat
+[OVERRIDE:28:I:PLANT:PLANT::plant:169]
+# Curled plant
+[OVERRIDE:29:I:PLANT:PLANT::plant:170]
+# Beet
+[OVERRIDE:30:I:PLANT:PLANT::plant:171]
+# Strawberry
+[OVERRIDE:31:I:PLANT:PLANT::plant:172]
+# Corn
+[OVERRIDE:33:I:PLANT:PLANT::plant:173]
+# String Bean
+[OVERRIDE:34:I:PLANT:PLANT::plant:174]
+# Turnip
+[OVERRIDE:35:I:PLANT:PLANT::plant:175]
+# Lettuce
+[OVERRIDE:36:I:PLANT:PLANT::plant:176]
+# Carrot
+[OVERRIDE:129:I:PLANT:PLANT::plant:177]
+# Celery
+[OVERRIDE:38:I:PLANT:PLANT::plant:178]
+# Eggplant
+[OVERRIDE:39:I:PLANT:PLANT::plant:179]
+# Grass Clump
+[OVERRIDE:40:I:PLANT:PLANT::plant:180]
+# Onion
+[OVERRIDE:41:I:PLANT:PLANT::plant:181]
+# Peanut
+[OVERRIDE:42:I:PLANT:PLANT::plant:182]
+# Potato
+[OVERRIDE:43:I:PLANT:PLANT::plant:183]
+# Tomato
+[OVERRIDE:44:I:PLANT:PLANT::plant:184]
+# Onion Grass
+[OVERRIDE:45:I:PLANT:PLANT::plant:185]
+# Raspberry
+[OVERRIDE:46:I:PLANT:PLANT::plant:186]
+# Pineapple
+[OVERRIDE:47:I:PLANT:PLANT::plant:187]
+# Lemon
+[OVERRIDE:48:I:PLANT:PLANT::plant:188]
+# Orange
+[OVERRIDE:49:I:PLANT:PLANT::plant:189]
+# Cherry
+[OVERRIDE:50:I:PLANT:PLANT::plant:190]
+# Peach
+[OVERRIDE:51:I:PLANT:PLANT::plant:191]
+# Star Flower
+[OVERRIDE:37:I:PLANT:PLANT::plant:192]
+# Cup Flower
+[OVERRIDE:242:I:PLANT:PLANT::plant:193]
+# Catkins
+[OVERRIDE:54:I:PLANT:PLANT::plant:194]
+# Pine Cone
+[OVERRIDE:55:I:PLANT:PLANT::plant:195]
+# Cotton
+[OVERRIDE:56:I:PLANT:PLANT::plant:197]
+# Gruel
+[OVERRIDE:57:I:PLANT:PLANT::plant:198]
+# Feather
+[OVERRIDE:58:I:PLANT:PLANT::plant:196]
+# Egg
+[OVERRIDE:59:I:PLANT:PLANT::main:248]
+# Dead picking
+[OVERRIDE:60:I:PLANT:PLANT::plant:199]
