@@ -112,4 +112,3 @@ inorganic_other
 	[MAX_EDGE:500]
 	[ABSORPTION:100]
 	[LIQUID_MISC_OTHER]
-
