@@ -1,5 +1,0 @@
-Rally Ho includes a modified ini file designed for use with "Text Will Be Text"
-
-If you are not using Text Will Be Text, there are two additional steps that will be needed:
-1. In the data/init folder, delete init.ini and rename no-twbt-init.ini to init.ini
-2. in the raw/objects folder, copy the contents of the "Vanilla Plant Raws" folder into taw/objects and replace any existing files.
